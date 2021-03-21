@@ -1,4 +1,4 @@
-package kit.pano.practice;
+package kit.pano.bingfa;
 
 /**
  * 双重检查方式的懒汉式单例模式
