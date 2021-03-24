@@ -3,7 +3,7 @@ package kit.pano.bingfa;
 /**
  * 测试volatile关键字是否是线程安全的，使用非原子操作类
  */
-public class VolatileTest01 {
+public class VolatileDemo01 {
 
     public static volatile int num = 0;
 

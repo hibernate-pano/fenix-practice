@@ -27,6 +27,7 @@ public class ThreadDemo01 implements Runnable {
 
     //使用ReentrantLock加锁
     ReentrantLock lock = new ReentrantLock();
+
     private void sellTickets() {
         lock.lock();
         if (tickets > 0) {

@@ -5,7 +5,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 测试volatile线程是否安全，使用原子操作类
  */
-public class VolatileTest02 {
+public class VolatileDemo02 {
 
     //J.U.C包中线程安全类
     public static AtomicInteger num = new AtomicInteger(0);
