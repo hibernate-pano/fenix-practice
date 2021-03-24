@@ -3,7 +3,7 @@ package kit.pano.bingfa;
 /**
  * 正确使用interrupt停止线程
  */
-public class InterruptThreadDemo01 implements Runnable {
+public class Interrupt01 implements Runnable {
 
     @Override
     public void run() {
@@ -15,7 +15,7 @@ public class InterruptThreadDemo01 implements Runnable {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Thread thread = new Thread(new InterruptThreadDemo01());
+        Thread thread = new Thread(new Interrupt01());
         thread.start();
         Thread.sleep(5);
         thread.interrupt();

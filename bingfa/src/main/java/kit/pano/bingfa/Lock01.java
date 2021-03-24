@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * 并发售票问题
  */
-public class ThreadDemo01 implements Runnable {
+public class Lock01 implements Runnable {
 
     private int tickets = 100;
 
@@ -38,7 +38,7 @@ public class ThreadDemo01 implements Runnable {
     }
 
     public static void main(String[] args) {
-        ThreadDemo01 t = new ThreadDemo01();
+        Lock01 t = new Lock01();
         Thread t1 = new Thread(t);
         Thread t2 = new Thread(t);
         t1.setName("t1 售票站台");
