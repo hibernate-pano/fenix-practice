@@ -13,16 +13,23 @@ public class Volatile04 {
         //启动生产者
         Producer producer = new Producer(queue);
         Thread producerThread = new Thread(producer);
+        //线程状态 NEW
+        System.out.println("线程状态1111  " + producerThread.getState());
         producerThread.start();
         //消费者
         Consumer consumer = new Consumer(queue);
         while (consumer.needMoreNumbers()) {
             System.out.println(consumer.queue.take() + " 被Consumer消费！！！");
+            //线程状态： RUNNABLE
+            System.out.println("线程状态2222  " + producerThread.getState());
             Thread.sleep(100);
         }
         System.out.println("Consume Done!!!");
-
+        //线程状态 NEW
+        System.out.println("线程状态3333  " + producerThread.getState());
         producer.canceled = true;
+        //线程状态 NEW
+        System.out.println("线程状态4444  " + producerThread.getState());
         System.out.println(producer.canceled);
 
     }
